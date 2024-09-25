@@ -13,8 +13,6 @@ const decodeTheRing = function (s, p) {
       if (sIndex < s.length && (p[pIndex] === '?' || p[pIndex] === s[sIndex])) {
           return match(sIndex + 1, pIndex + 1);
       }
-
-      // If we reach here, it means there was no match
       return false;
   };
 
