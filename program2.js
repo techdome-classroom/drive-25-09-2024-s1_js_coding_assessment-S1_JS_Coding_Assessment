@@ -1,12 +1,7 @@
 const decodeTheRing = function (s, p) {
   const match = (sIndex, pIndex) => {
-      // If we've reached the end of both strings, it's a match
       if (sIndex === s.length && pIndex === p.length) return true;
-
-      // If we've reached the end of the pattern but still have characters in the string
       if (pIndex === p.length) return false;
-
-      // Handle '*' wildcard
       if (p[pIndex] === '*') {
           // Try matching '*' with zero characters (move pattern index)
           if (match(sIndex, pIndex + 1)) return true;
